@@ -8,7 +8,7 @@
   "private": true,
   "repository": {
     "type": "git",
-    "url": "git+https://mvdicarlo@github.com/mvdicarlo/postybirb-plus.git"
+    "url": "git+https://LoboAnimae@github.com/LoboAnimae/postybirb-plus.git"
   },
   "scripts": {
     "nest": "nest",
