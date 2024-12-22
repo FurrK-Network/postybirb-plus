@@ -34,7 +34,7 @@ import {
   ConfigProvider,
   Modal,
   Tabs,
-  message
+  message,
 } from 'antd';
 import ErrorBoundary from '../../components/ErrorBoundary';
 
@@ -62,7 +62,7 @@ export default class AppLayout extends React.Component<Props, State> {
     descriptionTemplateVisible: false,
     settingsVisible: false,
     tagGroupVisible: false,
-    tagConverterVisible: false
+    tagConverterVisible: false,
   };
 
   private readonly websites = Object.keys(WebsiteRegistry.websites);
@@ -109,9 +109,10 @@ export default class AppLayout extends React.Component<Props, State> {
     const state = uiStore!.state;
     message.config({
       duration: 2,
-      maxCount: 2
+      maxCount: 2,
     });
     this.props.uiStore!.setActiveNav(this.getCurrentNavId());
+    console.log({ websites: this.websites });
     return (
       <ConfigProvider>
         <Modal
@@ -157,7 +158,7 @@ export default class AppLayout extends React.Component<Props, State> {
                 <div
                   className="logo"
                   style={{
-                    backgroundImage: `url("${process.env.PUBLIC_URL}/assets/icons/minnowicon.png")`
+                    backgroundImage: `url("${process.env.PUBLIC_URL}/assets/icons/minnowicon.png")`,
                   }}
                 >
                   PostyBirb

@@ -33,6 +33,7 @@ import { SubscribeStarAdult } from './subscribe-star/SubscribeStarAdult';
 import { Pixelfed } from './pixelfed/Pixelfed';
 import { Bluesky } from './bluesky/Bluesky';
 import { Twitter } from './twitter/Twitter';
+import { CustomE621 } from './custom-e621/customE621';
 
 export class WebsiteRegistry {
   static readonly websites: Record<string, Website> = {
@@ -69,6 +70,7 @@ export class WebsiteRegistry {
     Tumblr: new Tumblr(),
     Weasyl: new Weasyl(),
     e621: new e621(),
+    CustomE621: new CustomE621(),
     Twitter: new Twitter(),
   };
 
@@ -79,7 +81,7 @@ export class WebsiteRegistry {
   static find(website: string): Website | undefined {
     const search = website.toLowerCase();
     return Object.values(WebsiteRegistry.websites).find(
-      w => w.name.toLowerCase() === search || w.internalName.toLowerCase() === search
+      w => w.name.toLowerCase() === search || w.internalName.toLowerCase() === search,
     );
   }
 }

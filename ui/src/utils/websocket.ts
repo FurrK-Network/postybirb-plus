@@ -9,6 +9,6 @@ const socket = io(localStorage.getItem('REMOTE_URI') || `https://localhost:${win
     },
   },
 });
-socket.on('connect', () => console.log('Connected'));
+socket.on('connect', () => console.log('Connected to socket'));
 
 export default socket;

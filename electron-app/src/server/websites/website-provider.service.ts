@@ -34,6 +34,7 @@ import { MissKey } from './misskey/misskey.service';
 import { Bluesky } from './bluesky/bluesky.service';
 import { Pleroma } from './pleroma/pleroma.service';
 import { Twitter } from './twitter/twitter.service';
+import { CustomE621 } from './custom-e621/custom-e621.service';
 
 @Injectable()
 export class WebsiteProvider {
@@ -51,6 +52,7 @@ export class WebsiteProvider {
     readonly inkbunny: Inkbunny,
     readonly sofurry: SoFurry,
     readonly e621: e621,
+    readonly CustomE621: CustomE621,
     readonly furaffinity: FurAffinity,
     readonly furtastic: Furtastic,
     readonly subscribestar: SubscribeStar,

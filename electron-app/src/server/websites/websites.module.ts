@@ -36,6 +36,7 @@ import { PixelfedModule } from './pixelfed/pixelfed.module';
 import { SubscribeStarAdultModule } from './subscribe-star-adult/subscribe-star-adult.module';
 import { BlueskyModule } from './bluesky/bluesky.module';
 import { TwitterModule } from './twitter/twitter.module';
+import { CustomE621Module } from './custom-e621/custom-e621.module';
 
 @Module({
   controllers: [WebsitesController],
@@ -46,6 +47,7 @@ import { TwitterModule } from './twitter/twitter.module';
     AryionModule,
     BlueskyModule,
     CustomModule,
+    CustomE621Module,
     DerpibooruModule,
     DeviantArtModule,
     DiscordModule,
